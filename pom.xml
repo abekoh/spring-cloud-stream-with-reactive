@@ -24,7 +24,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<spring-cloud-gcp.version>2.0.4</spring-cloud-gcp.version>
+		<spring-cloud-gcp.version>1.2.8.RELEASE</spring-cloud-gcp.version>
 		<spring-cloud.version>2020.0.4</spring-cloud.version>
 		<lombok.version>1.18.22</lombok.version>
 	</properties>
@@ -39,7 +39,7 @@
 				<scope>import</scope>
 			</dependency>
 			<dependency>
-				<groupId>com.google.cloud</groupId>
+				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-gcp-dependencies</artifactId>
 				<version>${spring-cloud-gcp.version}</version>
 				<type>pom</type>
