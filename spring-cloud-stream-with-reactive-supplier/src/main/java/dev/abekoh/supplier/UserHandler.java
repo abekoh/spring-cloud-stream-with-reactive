@@ -29,7 +29,7 @@ public class UserHandler {
 	 */
 	public Mono<ServerResponse> send(ServerRequest request) {
 		return request.bodyToMono(UserRequest.class)
-				.doOnNext(usr -> log.info("receive UserRequest={}", usr))
+				.doOnNext(usr -> log.info("receive {}", usr))
 				.map(UserRequest::toNewUser)
 				.doOnNext(usr -> sink.emitNext(usr, EmitFailureHandler.FAIL_FAST))
 				.flatMap(usr -> ServerResponse.ok().build());

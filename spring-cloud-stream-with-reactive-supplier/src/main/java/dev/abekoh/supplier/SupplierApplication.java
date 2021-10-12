@@ -9,7 +9,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SupplierApplication {
 
 	public static void main(String[] args) {
-		BlockHound.install();
+		BlockHound.builder()
+				// LogbackのみBlockingを許可
+				.allowBlockingCallsInside(
+						"ch.qos.logback.classic.Logger",
+						"callAppenders"
+				)
+				.install();
 		SpringApplication.run(SupplierApplication.class, args);
 	}
 
