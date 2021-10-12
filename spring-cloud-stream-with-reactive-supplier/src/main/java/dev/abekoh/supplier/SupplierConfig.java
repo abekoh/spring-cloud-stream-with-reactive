@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SupplierConfig {
-
 	@Bean
 	public Sinks.Many<User> sink() {
 		return Sinks.many().unicast().onBackpressureBuffer();
@@ -21,5 +20,4 @@ public class SupplierConfig {
 	public Supplier<Flux<User>> producer(Sinks.Many<User> sink) {
 		return sink::asFlux;
 	}
-
 }

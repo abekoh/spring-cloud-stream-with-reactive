@@ -10,10 +10,8 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class UserReceiver {
-
 	public Mono<Void> receiveUser(User user) {
 		log.info("receive {}", user);
 		return Mono.empty();
 	}
-
 }

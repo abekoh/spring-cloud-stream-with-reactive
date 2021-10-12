@@ -12,10 +12,8 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 
 @Configuration
 public class RouterConfig {
-
 	@Bean
 	public RouterFunction<ServerResponse> routes(UserHandler userHandler) {
 		return route(path("/api/v1/users").and(accept(MediaType.APPLICATION_JSON)), userHandler::send);
 	}
-
 }

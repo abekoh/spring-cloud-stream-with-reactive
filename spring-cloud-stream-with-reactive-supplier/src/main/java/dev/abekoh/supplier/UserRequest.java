@@ -26,8 +26,11 @@ public class UserRequest {
 		this.lastName = lastName;
 	}
 
+	/**
+	 * 新規ユーザーに変換
+	 * @return User (with userId)
+	 */
 	public User toNewUser() {
 		return new User(firstName, lastName);
 	}
-
 }
