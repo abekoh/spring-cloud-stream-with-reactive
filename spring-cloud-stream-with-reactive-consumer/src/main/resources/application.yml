@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    function:
+      definition: consumer
+    stream:
+      bindings:
+        consumer-in-0:
+          destination: user
+    gcp:
+      pubsub:
+        project-id: abekoh-sand
+      #        emulator-host: localhost:8085
+      credentials:
+        location: file:/Users/abekoh/.gcp/reactive-messaging-sample.json
