@@ -27,6 +27,7 @@
 		<spring-cloud-gcp.version>1.2.8.RELEASE</spring-cloud-gcp.version>
 		<spring-cloud.version>2020.0.4</spring-cloud.version>
 		<lombok.version>1.18.22</lombok.version>
+		<blockhound.version>1.0.6.RELEASE</blockhound.version>
 	</properties>
 
 	<dependencyManagement>
@@ -55,6 +56,11 @@
 				<artifactId>lombok</artifactId>
 				<optional>true</optional>
 				<version>${lombok.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.projectreactor.tools</groupId>
+				<artifactId>blockhound</artifactId>
+				<version>${blockhound.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

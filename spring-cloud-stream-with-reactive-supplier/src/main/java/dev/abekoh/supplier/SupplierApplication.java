@@ -1,5 +1,7 @@
 package dev.abekoh.supplier;
 
+import reactor.blockhound.BlockHound;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SupplierApplication {
 
 	public static void main(String[] args) {
+		BlockHound.install();
 		SpringApplication.run(SupplierApplication.class, args);
 	}
 
