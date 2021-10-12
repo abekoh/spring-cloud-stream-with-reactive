@@ -32,6 +32,7 @@ public class UserHandler {
 				.doOnNext(usr -> log.info("receive {}", usr))
 				.map(UserRequest::toNewUser)
 				.doOnNext(usr -> sink.emitNext(usr, EmitFailureHandler.FAIL_FAST))
+				.doOnNext(usr -> log.info("send {}", usr))
 				.flatMap(usr -> ServerResponse.ok().build());
 
 	}
