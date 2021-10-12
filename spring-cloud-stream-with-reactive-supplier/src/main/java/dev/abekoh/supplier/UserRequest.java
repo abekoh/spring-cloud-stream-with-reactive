@@ -7,7 +7,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import dev.abekoh.domain.models.User;
+import lombok.ToString;
 
+@ToString
 public class UserRequest {
 
 	final String firstName;
