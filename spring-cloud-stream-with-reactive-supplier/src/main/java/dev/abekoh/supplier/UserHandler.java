@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Sinks;
 import reactor.core.publisher.Sinks.EmitFailureHandler;
-import reactor.core.publisher.Sinks.Many;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
@@ -17,7 +16,7 @@ public class UserHandler {
 
 	private final Sinks.Many<User> sink;
 
-	public UserHandler(Many<User> sink) {
+	public UserHandler(Sinks.Many<User> sink) {
 		this.sink = sink;
 	}
 
