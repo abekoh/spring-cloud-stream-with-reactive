@@ -53,12 +53,12 @@ curl -X POST -H 'Content-Type: application/json' \
 supplier log (#1)
 
 ```
-2021-10-13 19:11:56.883  INFO 29170 --- [ctor-http-nio-3] dev.abekoh.supplier.UserHandler          : receive UserRequest(firstName=Taro, lastName=Yamada)
-2021-10-13 19:11:56.883  INFO 29170 --- [ctor-http-nio-3] dev.abekoh.supplier.UserHandler          : send User(userId=9a7108d2-0bf2-4ffe-ac24-2f26326c1640, firstName=Taro, lastName=Yamada)
+receive UserRequest(firstName=Taro, lastName=Yamada)
+send User(userId=9a7108d2-0bf2-4ffe-ac24-2f26326c1640, firstName=Taro, lastName=Yamada)
 ```
 
 consumer log (#2)
 
 ```
-2021-10-13 19:11:56.906  INFO 29205 --- [sub-subscriber1] dev.abekoh.consumer.UserReceiver         : receive User(userId=9a7108d2-0bf2-4ffe-ac24-2f26326c1640, firstName=Taro, lastName=Yamada)
+receive User(userId=9a7108d2-0bf2-4ffe-ac24-2f26326c1640, firstName=Taro, lastName=Yamada)
 ```
