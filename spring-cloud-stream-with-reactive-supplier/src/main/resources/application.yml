@@ -11,6 +11,4 @@ spring:
     gcp:
       pubsub:
         project-id: abekoh-sand
-      #        emulator-host: localhost:8085
-      credentials:
-        location: file:/Users/abekoh/.gcp/reactive-messaging-sample.json
+        emulator-host: localhost:8090
