@@ -10,5 +10,5 @@ spring:
           destination: user
     gcp:
       pubsub:
-        project-id: abekoh-sand
+        project-id: reactive-sample
         emulator-host: localhost:8090
