@@ -1,6 +1,6 @@
 # spring-cloud-stream-with-reactive
 
-Spring Cloud StreamとReactorで、ノンブロッキングなストリーム処理を実現する
+[Spring Cloud Stream, Reactorを使ってノンブロッキングなストリーム処理を実装する - Zenn](https://zenn.dev/abekoh/articles/4b898e6bc744fa)
 
 ## Overview
 
